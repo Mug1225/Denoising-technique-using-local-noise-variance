@@ -41,7 +41,7 @@ if __name__== "__main__":
     m, n = img.size
     img = cv2.imread(path)
     img2=img.copy()
-    kernel = np.array([3, 3])
+    kernel = np.array([3, 3]) //can be any odd  kernel for evaluating local noise
     img2[:, :, 0] = filterfun(img[:, :, 0], kernel, m, n)
     img2[:, :, 1] = filterfun(img[:, :, 1], kernel, m, n)
     img2[:, :, 2] = filterfun(img[:, :, 2], kernel, m, n)
